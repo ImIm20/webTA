@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> DNA Sequence Classification</title>
+  <link rel="stylesheet" href="./static/style.css">
+
+  
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="results", id="wrapper">
+  <div id="paper">
+		 <div id="margin"><strong><center>DNA Sequence Classification Result</center></strong></div>
+</div>
+  
+	<textarea rows=10 cols="80" id="text">Query: {{ message }}</textarea>
+	<div id="paper">
+		 <div id="margin"><center>
+	{% if prediction == 0%}
+	<h5>Prediction Result: <br/>Your input sequence is a type of SARS virus</h5>
+	{% elif prediction == 1%}
+	<h5>Prediction Result: <br/>Your input sequence is a type of RSV virus</h5>
+	{% elif prediction == 2%}
+	<h5>Predicition Result: <br/>Your input sequence is a type of MERS virus</h5>
+	{% elif prediction == 3%}
+	<h5>Prediction Result: <br/>Your input sequence is a type of Influenza A virus</h5>
+	{% elif prediction == 4%}
+	<h5>Prediction Result: <br/>Sorry, your input is not one of the following types of viruses (SARS, MERS, Influenza, or RSV)</h5>
+	{% elif prediction == 99%}
+	<h5>Upload fasta file or enter sequence properly</h5>
+	{% endif %}
+	<input type="submit" class="btn-info" value="Back" id="button" onclick="location.href='/'">
+       </center></div>
+</div>
+</div>
+
+</div>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://static.tumblr.com/maopbtg/oimmiw86r/jquery.autosize-min.js'></script><script src="./static/script.js"></script>
+
+</body>
+</html>
