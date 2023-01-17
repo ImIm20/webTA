@@ -1,0 +1,7 @@
+
+Flask
+Tensorflow==2.11.0
+Numpy
+Regex
+Keras-Preprocessing
+Bio
